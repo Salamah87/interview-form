@@ -1,0 +1,12 @@
+{
+  "name": "interview-live-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Live interview evaluation form with local saved submissions.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
