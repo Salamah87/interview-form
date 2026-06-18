@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>نموذج تقييم المقابلة</title>
+  <style>
+    :root{--teal:#2bbfcc;--teal-dk:#1a8a94;--navy:#0f2a4a;--gold:#f4c430;--green:#059669;--red:#c8102e;--gray:#64748b;--line:#dbe7ee;--paper:#fff}
+    *{box-sizing:border-box}body{margin:0;background:#cbd5e1;color:#102033;font-family:Tahoma,Arial,sans-serif;padding:24px}main{max-width:920px;margin:auto;background:var(--paper);box-shadow:0 20px 64px #0003}
+    header{background:var(--navy);color:white;padding:18px 28px;display:flex;justify-content:space-between;gap:20px;align-items:center}.brand{font-weight:800}.brand small{display:block;color:#ffffff99;font-weight:400}.meta{font-size:12px;color:#ffffffaa;text-align:left}
+    .title{background:linear-gradient(135deg,#e0f7fa,#fffbeb);border-bottom:3px solid var(--teal);padding:20px 28px}.title h1{margin:0;color:var(--navy);font-size:26px}.title p{margin:5px 0 0;color:var(--gray)}
+    form{padding:24px 28px;display:grid;gap:22px}section{display:grid;gap:14px}.section-title{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding-bottom:8px;color:var(--navy);font-weight:800}.badge{background:var(--teal);color:white;border-radius:6px;padding:5px 10px;font-size:12px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}label{display:grid;gap:5px;font-size:12px;color:var(--gray);font-weight:700}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:10px 11px;font:inherit;font-size:14px;background:white;color:#172033}textarea{min-height:84px;resize:vertical}
+    .scale{display:flex;flex-wrap:wrap;gap:8px;background:#f8fafc;border:1px solid var(--line);border-radius:6px;padding:12px}.scale span{font-size:12px;color:var(--gray);border:1px solid var(--line);border-radius:5px;padding:6px 8px;background:white}
+    table{width:100%;border-collapse:collapse;border:1px solid var(--line);overflow:hidden;border-radius:6px}th{background:var(--navy);color:white;text-align:right;font-size:12px;padding:10px}td{border-top:1px solid var(--line);padding:10px;vertical-align:top}tbody tr:nth-child(even){background:#f8fafc}.criterion{font-weight:800;color:var(--navy)}.criterion small{display:block;color:var(--gray);font-weight:400}.score-input{min-width:88px}
+    .score-box{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#f0fbfc;border:1px solid #d1faf8;border-radius:6px;padding:16px}.score-value{width:76px;height:76px;border:2px solid var(--teal);border-radius:50%;display:grid;place-items:center;color:var(--teal-dk);font-weight:900;font-size:18px;direction:ltr}
+    .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rec{border:2px solid var(--line);border-radius:6px;padding:13px;display:flex;gap:9px;align-items:center;color:var(--navy);font-weight:800}.rec input{width:auto}.rec small{display:block;color:var(--gray);font-weight:400}.rec.green{border-color:var(--green);background:#ecfdf5}.rec.gold{border-color:#d97706;background:#fffbeb}.rec.red{border-color:var(--red);background:#fef2f2}
+    .actions{display:flex;gap:12px;justify-content:flex-start;align-items:center;border-top:1px solid var(--line);padding-top:18px}button,a.button{border:0;border-radius:6px;background:var(--teal);color:white;text-decoration:none;padding:11px 16px;font:inherit;font-weight:800;cursor:pointer}.secondary{background:var(--navy)}.status{color:var(--gray);font-size:13px}
+    .admin{padding:0 28px 28px}.admin h2{color:var(--navy)}.cards{display:grid;gap:10px}.card{border:1px solid var(--line);border-radius:6px;padding:12px;background:#fff}.card strong{color:var(--navy)}
+    .result-name{border:0;background:none;color:var(--teal-dk);font:inherit;font-weight:900;padding:0;text-decoration:underline;cursor:pointer}.detail{border:2px solid var(--teal);border-radius:6px;padding:16px;background:#f7feff;margin-bottom:14px;display:none}.detail.open{display:grid;gap:12px}.detail h3{margin:0;color:var(--navy)}.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.detail-item{border:1px solid var(--line);border-radius:6px;background:white;padding:10px}.detail-item span{display:block;color:var(--gray);font-size:12px;font-weight:800}.detail-item b{color:var(--navy)}.detail table{background:white}.detail-notes{white-space:pre-wrap}
+    @media(max-width:760px){body{padding:10px}.grid,.grid.three,.rec-grid{grid-template-columns:1fr}header{display:block}.meta{text-align:right;margin-top:8px}table,thead,tbody,tr,td,th{display:block}thead{display:none}td{border-top:0}.score-box{align-items:flex-start}.actions{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">الحداثة للاتصالات <small>Alhadatha Telecommunications</small></div>
+    <div class="meta">HR-F-001<br>الإصدار 1.0 | يونيو 2026</div>
+  </header>
+  <div class="title">
+    <h1>نموذج تقييم المقابلة</h1>
+    <p>Interview Evaluation Form</p>
+  </div>
+
+  <form id="evaluationForm">
+    <section>
+      <div class="section-title"><span class="badge">A</span> معلومات المرشح</div>
+      <div class="grid">
+        <label>اسم المرشح / Candidate Name<input name="candidateName" required></label>
+        <label>المنصب المتقدم له / Position Applied<input name="positionApplied" required></label>
+      </div>
+      <div class="grid three">
+        <label>القسم / Department<input name="department"></label>
+        <label>تاريخ المقابلة / Interview Date<input name="interviewDate" type="date"></label>
+        <label>نوع المقابلة / Interview Type<input name="interviewType"></label>
+      </div>
+      <div class="grid">
+        <label>اسم المقابِل / Interviewer Name<input name="interviewerName" required></label>
+        <label>المسمى الوظيفي للمقابل / Interviewer Title<input name="interviewerTitle"></label>
+      </div>
+    </section>
+
+    <div class="scale">
+      <span>1 ضعيف جداً</span><span>2 ضعيف</span><span>3 مقبول</span><span>4 جيد</span><span>5 ممتاز</span>
+    </div>
+
+    <section>
+      <div class="section-title"><span class="badge">B</span> معايير التقييم</div>
+      <table>
+        <thead><tr><th>المعيار / Criterion</th><th>التقييم</th><th>ملاحظات / Notes</th></tr></thead>
+        <tbody id="criteriaRows"></tbody>
+      </table>
+    </section>
+
+    <div class="score-box">
+      <div>
+        <strong>مجموع الدرجات / Total Score</strong>
+        <p>الحد الأقصى 30 درجة | Maximum 30 points</p>
+      </div>
+      <div class="score-value"><span id="totalScore">0 / 30</span></div>
+    </div>
+
+    <section>
+      <div class="section-title"><span class="badge">C</span> التوصية النهائية</div>
+      <div class="rec-grid">
+        <label class="rec green"><input type="radio" name="recommendation" value="Recommend Hiring" required><span>يُنصح بالتعيين <small>Recommend Hiring</small></span></label>
+        <label class="rec gold"><input type="radio" name="recommendation" value="Waitlist / 2nd Interview"><span>قائمة الانتظار <small>Waitlist / 2nd Interview</small></span></label>
+        <label class="rec red"><input type="radio" name="recommendation" value="Not Recommended"><span>لا يُنصح بالتعيين <small>Not Recommended</small></span></label>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><span class="badge">D</span> ملاحظات عامة</div>
+      <label>ملاحظات المقابل / Interviewer Comments<textarea name="comments"></textarea></label>
+      <label>نقاط القوة / Strengths<textarea name="strengths"></textarea></label>
+      <label>مجالات التطوير / Areas for Development<textarea name="developmentAreas"></textarea></label>
+    </section>
+
+    <div class="actions">
+      <button type="submit">حفظ التقييم</button>
+      <a class="button secondary" href="/export.csv">تحميل النتائج CSV</a>
+      <span class="status" id="status"></span>
+    </div>
+  </form>
+
+  <section class="admin">
+    <h2>آخر النتائج المحفوظة</h2>
+    <div id="submissionDetail" class="detail"></div>
+    <div id="submissions" class="cards"></div>
+  </section>
+</main>
+
+<script>
+const criteria = [
+  ["Talent & Attitude", "الموهبة والموقف الإيجابي"],
+  ["Professional Knowledge", "المعرفة المهنية"],
+  ["Technical Skills", "المهارات التقنية"],
+  ["Education & Qualifications", "التعليم والمؤهلات"],
+  ["Work Experience", "الخبرة العملية"],
+  ["Communication & Presence", "التواصل والشخصية"]
+];
+
+const rows = document.getElementById("criteriaRows");
+criteria.forEach(([en, ar], index) => {
+  rows.insertAdjacentHTML("beforeend", `
+    <tr>
+      <td><div class="criterion">${index + 1}. ${ar}<small>${en}</small></div></td>
+      <td><select class="score-input" name="score-${index}" required>
+        <option value="">اختر</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select></td>
+      <td><textarea name="notes-${index}" aria-label="${en} notes"></textarea></td>
+    </tr>
+  `);
+});
+
+function calculateTotal() {
+  const total = [...document.querySelectorAll(".score-input")]
+    .reduce((sum, input) => sum + Number(input.value || 0), 0);
+  document.getElementById("totalScore").textContent = `${total} / 30`;
+}
+
+async function loadSubmissions() {
+  const container = document.getElementById("submissions");
+  const response = await fetch("/api/submissions");
+  const submissions = await response.json();
+  window.savedSubmissions = submissions;
+  container.innerHTML = submissions.slice(0, 10).map(item => `
+    <div class="card">
+      <button class="result-name" type="button" data-id="${item.id}">${escapeHtml(item.candidateName)}</button>
+      - ${escapeHtml(item.positionApplied)}<br>
+      ${escapeHtml(item.interviewerName)} | ${item.totalScore}/30 | ${escapeHtml(item.recommendation)}<br>
+      <small>${new Date(item.createdAt).toLocaleString()}</small>
+    </div>
+  `).join("") || "<p>لا توجد نتائج محفوظة حتى الآن.</p>";
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[character]));
+}
+
+function showSubmission(id) {
+  const item = (window.savedSubmissions || []).find(submission => submission.id === id);
+  if (!item) return;
+
+  const detail = document.getElementById("submissionDetail");
+  detail.classList.add("open");
+  detail.innerHTML = `
+    <h3>${escapeHtml(item.candidateName)}</h3>
+    <div class="detail-grid">
+      <div class="detail-item"><span>المنصب / Position</span><b>${escapeHtml(item.positionApplied)}</b></div>
+      <div class="detail-item"><span>القسم / Department</span><b>${escapeHtml(item.department)}</b></div>
+      <div class="detail-item"><span>تاريخ المقابلة / Interview Date</span><b>${escapeHtml(item.interviewDate)}</b></div>
+      <div class="detail-item"><span>نوع المقابلة / Interview Type</span><b>${escapeHtml(item.interviewType)}</b></div>
+      <div class="detail-item"><span>اسم المقابل / Interviewer</span><b>${escapeHtml(item.interviewerName)}</b></div>
+      <div class="detail-item"><span>المسمى الوظيفي / Title</span><b>${escapeHtml(item.interviewerTitle)}</b></div>
+      <div class="detail-item"><span>المجموع / Total</span><b>${item.totalScore}/30</b></div>
+      <div class="detail-item"><span>التوصية / Recommendation</span><b>${escapeHtml(item.recommendation)}</b></div>
+    </div>
+    <table>
+      <thead><tr><th>المعيار / Criterion</th><th>التقييم</th><th>ملاحظات / Notes</th></tr></thead>
+      <tbody>
+        ${item.criteria.map(criterion => `
+          <tr>
+            <td>${escapeHtml(criterion.name)}</td>
+            <td>${escapeHtml(criterion.score)}</td>
+            <td>${escapeHtml(criterion.notes)}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+    <div class="detail-item"><span>ملاحظات المقابل / Comments</span><div class="detail-notes">${escapeHtml(item.comments)}</div></div>
+    <div class="detail-item"><span>نقاط القوة / Strengths</span><div class="detail-notes">${escapeHtml(item.strengths)}</div></div>
+    <div class="detail-item"><span>مجالات التطوير / Areas for Development</span><div class="detail-notes">${escapeHtml(item.developmentAreas)}</div></div>
+  `;
+  detail.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+document.addEventListener("change", event => {
+  if (event.target.classList.contains("score-input")) calculateTotal();
+});
+
+document.getElementById("submissions").addEventListener("click", event => {
+  const button = event.target.closest(".result-name");
+  if (button) showSubmission(button.dataset.id);
+});
+
+document.getElementById("evaluationForm").addEventListener("submit", async event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const data = Object.fromEntries(new FormData(form).entries());
+  const payload = {
+    candidateName: data.candidateName,
+    positionApplied: data.positionApplied,
+    department: data.department,
+    interviewDate: data.interviewDate,
+    interviewType: data.interviewType,
+    interviewerName: data.interviewerName,
+    interviewerTitle: data.interviewerTitle,
+    criteria: criteria.map(([en], index) => ({
+      name: en,
+      score: Number(data[`score-${index}`]),
+      notes: data[`notes-${index}`]
+    })),
+    recommendation: data.recommendation,
+    comments: data.comments,
+    strengths: data.strengths,
+    developmentAreas: data.developmentAreas
+  };
+
+  const status = document.getElementById("status");
+  status.textContent = "جاري الحفظ...";
+  const response = await fetch("/api/submissions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+  if (!response.ok) {
+    status.textContent = "لم يتم الحفظ. تأكد من تعبئة الحقول المطلوبة.";
+    return;
+  }
+  form.reset();
+  calculateTotal();
+  status.textContent = "تم حفظ التقييم بنجاح.";
+  await loadSubmissions();
+});
+
+calculateTotal();
+loadSubmissions();
+</script>
+</body>
+</html>
